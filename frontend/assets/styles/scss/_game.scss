@@ -1,0 +1,21 @@
+#game-container {
+    display: none;
+    width: 45vw;
+    #game-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1em;
+    }
+
+    #game-field {
+        height: 45vw;
+        background-color: $gameFieldColour;
+        border-radius: 1em;
+        margin: auto;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,57 @@
+#game-container {
+  display: none;
+  width: 45vw;
+}
+#game-container #game-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+#game-container #game-field {
+  height: 45vw;
+  background-color: rgb(232, 219, 183);
+  border-radius: 1em;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#start-container #start-btn {
+  font-size: 2rem;
+  padding: 1em;
+  background: none;
+  border: 4px solid rgb(255, 254, 250);
+  color: rgb(255, 254, 250);
+  font-weight: 700;
+  background-image: linear-gradient(45deg, rgb(255, 254, 250) 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+}
+#start-container #start-btn:hover {
+  background-position: 0;
+  color: rgb(71, 16, 88);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(71, 16, 88);
+  background: linear-gradient(0deg, rgb(50, 0, 62) 0%, rgb(100, 0, 110) 100%);
+  background-repeat: repeat-y;
+  color: rgb(255, 254, 250);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body h1 {
+  margin-bottom: 1em;
+}
+body .btn {
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1em;
+}/*# sourceMappingURL=main.css.map */

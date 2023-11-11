@@ -1,7 +1,9 @@
 @import './scss/variables';
+@import './scss/cards';
 @import './scss/mixins';
 @import './scss/game';
 @import './scss/start';
+@import './nullstyle.css';
 
 body {
     width: 100vw;

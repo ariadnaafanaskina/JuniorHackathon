@@ -7,6 +7,7 @@ function startGame() {
 }
 
 function restartGame() {
+    closeModal();
     document.querySelector(".cards-wrapper").innerHTML = '';
     generateGame();
     makeAllCardsFlipped();

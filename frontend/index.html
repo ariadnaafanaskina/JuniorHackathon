@@ -16,12 +16,12 @@
     </div>
     <div id="game-container">
         <div id="game-header">
-            <p>Количество ходов: </p>
-            <button class="btn">Начать заново</button>
+            <p>Количество ходов: <span id="moves-number">0</span></p>
+            <button class="btn" onclick="restartGame()">Начать заново</button>
         </div>
         <div id="game-field">
             <div class="cards-wrapper">
-                <div class="card">
+                <!-- <div class="card">
                     <div class="card__face card__face--front">
                     </div>
                     <div class="card__face card__face--back">
@@ -132,13 +132,14 @@
                     <div class="card__face card__face--back">
                         <img src="./assets/img/console-device-game-svgrepo-com.svg" alt="">
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
 
         <script src="./assets/js/start.js"></script>
-        <script src="./assets/js/flipCard.js"></script>
+    <script src="./assets/js/game.js"></script>
+    <script src="./assets/js/flipCard.js"></script>
 
 </body>
 

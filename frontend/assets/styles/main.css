@@ -6,6 +6,7 @@
   border-radius: 2%;
   padding: 3%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 1.33%;
   background-color: rgb(218, 196, 160);
@@ -115,9 +116,10 @@ body {
 }
 body h1 {
   margin-bottom: 1em;
+  font-size: 2rem;
 }
 body .btn {
   border: none;
   padding: 0.25rem 0.75rem;
   border-radius: 1em;
-}
+}/*# sourceMappingURL=main.css.map */

@@ -1,7 +1,11 @@
 let cardTransitionTime = 500;
 let cards = document.querySelectorAll(".card");
-let cardsWrapper = document.querySelector(".cards-wrapper")
-let switching = false;
+const cardsWrapper = document.querySelector(".cards-wrapper");
+const movesNumberElem = document.querySelector('#moves-number');
+console.log(movesNumberElem)
+
+let movesNumber = 0;
+movesNumberElem.innerHTML = movesNumber;
 
 
 function flipCardListener() {
@@ -9,26 +13,27 @@ function flipCardListener() {
     let lastSeenCard = null
 
     cards.forEach((card) => card.addEventListener("click", flipCard = () => {
-
         card.classList.add("is-flipped");
 
         if (lastSeenCard) {
-            if (lastSeenCard.children[1].children[0].src === card.children[1].children[0].src) {
-                lastSeenCard = null;
-                return;
-            } else {
+            if (!(lastSeenCard.children[1].children[0].src === card.children[1].children[0].src)) {
                 cardsWrapper.style.pointerEvents = 'none';
 
                 setTimeout(() => {
+
                     lastSeenCard.classList.remove('is-flipped');
                     card.classList.remove('is-flipped');
                     lastSeenCard = null;
-                    cardsWrapper.style.pointerEvents = '';
+                    cardsWrapper.style.pointerEvents = 'auto';
                 }, 400)
-                return;
+            } else {
+                lastSeenCard = null;
             }
+            movesNumber++;
+            movesNumberElem.innerHTML = movesNumber;
+        } else {
+            lastSeenCard = card;
         }
-        lastSeenCard = card
     }));
 }
 

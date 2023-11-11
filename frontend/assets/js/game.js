@@ -12,15 +12,22 @@ let hasWon = false;
 function generateGame() {
     let gameWrap = document.querySelector(".cards-wrapper");
     hasWon = false;
-
+    console.log('add');
+    let n = 1;
     imgArr.forEach(img => {
-        gameWrap.innerHTML += `<div class="card">
-                    <img class="card-icon" src="${img}" alt="">
-                </div>`;
-    })
+        gameWrap.innerHTML += `<div id="${n}" class="card">
+                            <div class="card__face card__face--front"></div>
+                            <div class="card__face card__face--back">
+                                <img src="${img}" alt="">
+                            </div>
+                        </div>`;
+                        n++;
+    });
+    cards = document.querySelectorAll(".card")
+    flipCardListener();
 }
 
 function hideCards() {
-    const cards = document.querySelectorAll('.card-icon');
-    cards.forEach((card) => card.style.visibility = 'hidden')
+    // const cards = document.querySelectorAll('.card-icon');
+    // cards.forEach((card) => card.style.visibility = 'hidden')
 }

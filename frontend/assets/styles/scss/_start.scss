@@ -1,6 +1,10 @@
 #start-container {
+    @include centerPosition;
+    p {
+        margin-bottom: 3em
+    }
     #start-btn {
-        font-size: 2rem;
+        align-self: center;
         padding: 1em;
         background: none;
         border: 4px solid $textColour;
@@ -21,3 +25,4 @@
         }
     }
 }
+

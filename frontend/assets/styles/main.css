@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 3%;
+  border-radius: 2%;
   padding: 3%;
   display: flex;
   flex-wrap: wrap;
@@ -12,25 +12,56 @@
 }
 .cards-wrapper .card {
   position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center right;
   width: 24%;
   height: 24%;
   border-radius: 14%;
-  background-color: rgb(205, 178, 228);
+  color: #fff;
+  font-family: sans-serif;
+  background-color: rgb(204, 167, 231);
+  box-shadow: 6px rgb(0, 1, 8);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.cards-wrapper .card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.3rem;
+  backface-visibility: hidden;
+}
+.cards-wrapper .card__face--back {
+  transform: rotateY(180deg);
+  background-color: rgb(142, 142, 211);
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.cards-wrapper .card img {
+.cards-wrapper .card__face--back img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
+.cards-wrapper .card__face--back:hover {
+  background-color: rgb(126, 126, 204);
+}
+.cards-wrapper .card__face--back:active {
+  background-color: rgb(84, 84, 153);
+}
 .cards-wrapper .card:hover {
   background-color: rgb(157, 131, 180);
 }
 .cards-wrapper .card:active {
   background-color: rgb(112, 90, 131);
+}
+.cards-wrapper .card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
 }
 
 #game-container {

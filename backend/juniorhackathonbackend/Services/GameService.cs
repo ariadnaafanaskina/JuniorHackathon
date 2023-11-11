@@ -25,7 +25,7 @@ namespace juniorhackathonbackend.Services
             var newGame = new GameEntity
             {
                 Id = Guid.NewGuid(),
-                NumberOfCards = 8,
+                NumberOfCards = 16,
                 Created = DateTime.UtcNow
             };
             _context.Games.Add(newGame);

@@ -9,6 +9,8 @@ function startGame() {
 function restartGame() {
     closeModal();
     document.querySelector(".cards-wrapper").innerHTML = '';
+    movesNumber = 0;
+    movesNumberElem.innerHTML = '0';
     generateGame();
     makeAllCardsFlipped();
     setTimeout(makeAllCardsNotFlipped, 5000);

@@ -8,8 +8,6 @@
 //     'https://www.svgrepo.com/show/415016/horse-rocking-child.svg', 'https://www.svgrepo.com/show/415018/baby-bottle-milk.svg',
 //     'https://www.svgrepo.com/show/415012/baseball-ball-bat.svg', 'https://www.svgrepo.com/show/415018/baby-bottle-milk.svg',];
 
-let hasWon = false;
-let imgArr;
 
 async function getCards() {
     const apiUrl = `http://80.90.188.96:5000/Game/GetGameToStart`;
@@ -29,8 +27,7 @@ async function getCards() {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
-            imgArr = data;
+            // console.log(data);
             return data.gameCardWithPlacements;
         })
         .catch((error) => {
@@ -41,8 +38,6 @@ async function generateGame() {
     const arr = await getCards();
     console.log(arr);
     let gameWrap = document.querySelector(".cards-wrapper");
-    hasWon = false;
-    console.log('add');
     let n = 1;
     arr.forEach(img => {
         gameWrap.innerHTML += `<div id="${n}" class="card">

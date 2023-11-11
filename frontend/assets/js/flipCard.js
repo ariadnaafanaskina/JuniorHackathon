@@ -5,6 +5,7 @@ const movesNumberElem = document.querySelector('#moves-number');
 console.log(movesNumberElem)
 
 let movesNumber = 0;
+let correctPairsNumber = 0;
 movesNumberElem.innerHTML = movesNumber;
 
 
@@ -27,6 +28,8 @@ function flipCardListener() {
                     cardsWrapper.style.pointerEvents = 'auto';
                 }, 400)
             } else {
+                correctPairsNumber++;
+                checkWin();
                 lastSeenCard = null;
             }
             movesNumber++;
@@ -47,4 +50,10 @@ function makeAllCardsFlipped() {
     cards.forEach((card) => {
         card.classList.toggle("is-flipped");
     });
+}
+
+function checkWin() {
+    if (correctPairsNumber == 8) {
+        openModal();
+    }
 }

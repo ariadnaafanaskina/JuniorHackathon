@@ -40,7 +40,7 @@ async function generateGame() {
     let gameWrap = document.querySelector(".cards-wrapper");
     let n = 1;
     arr.forEach(img => {
-        gameWrap.innerHTML += `<div id="${n}" class="card">
+        gameWrap.innerHTML += `<div id="${n}" class="card is-flipped">
                             <div class="card__face card__face--front"></div>
                             <div class="card__face card__face--back">
                                 <img src="${img.url}" alt="">

@@ -1,3 +1,38 @@
+@import './nullstyle.css';
+.cards-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 3%;
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.33%;
+  background-color: rgb(218, 196, 160);
+}
+.cards-wrapper .card {
+  position: relative;
+  width: 24%;
+  height: 24%;
+  border-radius: 14%;
+  background-color: rgb(205, 178, 228);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.cards-wrapper .card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cards-wrapper .card:hover {
+  background-color: rgb(157, 131, 180);
+}
+.cards-wrapper .card:active {
+  background-color: rgb(112, 90, 131);
+}
+
 #game-container {
   display: none;
   width: 45vw;
@@ -54,4 +89,4 @@ body .btn {
   border: none;
   padding: 0.25rem 0.75rem;
   border-radius: 1em;
-}/*# sourceMappingURL=main.css.map */
+}

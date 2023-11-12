@@ -1,7 +1,15 @@
+h1{
+    font-size: 6rem;
+    font-weight: 700;
+    // margin-bottom: 
+}
 #start-container {
     @include centerPosition;
+
     p {
-        margin-bottom: 3em
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
     }
     #start-btn {
         align-self: center;

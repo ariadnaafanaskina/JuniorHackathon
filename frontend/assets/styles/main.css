@@ -10,7 +10,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1.33%;
-  background-color: rgb(218, 196, 160);
+  background-color: rgb(255, 255, 255);
 }
 .cards-wrapper .card {
   position: relative;
@@ -65,7 +65,24 @@
 .cards-wrapper .card.is-flipped {
   transform: translateX(-100%) rotateY(-180deg);
 }
+.cards-wrapper .is-wrong {
+  animation: wrong 1s 1;
+}
 
+@keyframes wrong {
+  0% {
+    background: rgba(255, 0, 0, 0.357) 194, 57, 57;
+  }
+  25% {
+    background: rgb(153, 15, 15) 194, 57, 57;
+  }
+  75% {
+    background: rgb(153, 15, 15) 194, 57, 57;
+  }
+  100% {
+    background: rgba(255, 0, 0, 0.357) 194, 57, 57;
+  }
+}
 #game-container {
   display: none;
   width: 35vw;
@@ -78,7 +95,7 @@
 }
 #game-container #game-field {
   height: 35vw;
-  background-color: rgb(232, 219, 183);
+  background-color: rgb(255, 255, 255);
   border-radius: 1em;
   margin: auto;
   display: flex;

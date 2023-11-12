@@ -8,7 +8,6 @@
 //     'https://www.svgrepo.com/show/415016/horse-rocking-child.svg', 'https://www.svgrepo.com/show/415018/baby-bottle-milk.svg',
 //     'https://www.svgrepo.com/show/415012/baseball-ball-bat.svg', 'https://www.svgrepo.com/show/415018/baby-bottle-milk.svg',];
 
-
 async function getCards() {
     const apiUrl = `http://80.90.188.96:5000/Game/GetGameToStart`;
 
@@ -40,7 +39,7 @@ async function generateGame() {
     let gameWrap = document.querySelector(".cards-wrapper");
     let n = 1;
     arr.forEach(img => {
-        gameWrap.innerHTML += `<div id="${n}" class="card is-flipped">
+        gameWrap.innerHTML += `<div id="${n}" class="card is-flipped unclickable">
                             <div class="card__face card__face--front"></div>
                             <div class="card__face card__face--back">
                                 <img src="${img.url}" alt="">

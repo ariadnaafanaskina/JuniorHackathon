@@ -1,4 +1,5 @@
 @import './nullstyle.css';
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Lobster&family=Oswald:wght@200;400;700&display=swap");
 .cards-wrapper {
   position: relative;
   width: 100%;
@@ -38,7 +39,7 @@
 }
 .cards-wrapper .card__face--back {
   transform: rotateY(180deg);
-  background-color: rgb(142, 142, 211);
+  background-color: rgb(196, 196, 255);
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -67,7 +68,7 @@
 
 #game-container {
   display: none;
-  width: 45vw;
+  width: 35vw;
 }
 #game-container #game-header {
   display: flex;
@@ -76,7 +77,7 @@
   margin-bottom: 1em;
 }
 #game-container #game-field {
-  height: 45vw;
+  height: 35vw;
   background-color: rgb(232, 219, 183);
   border-radius: 1em;
   margin: auto;
@@ -85,8 +86,17 @@
   flex-wrap: wrap;
 }
 
+#start-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#start-container p {
+  margin-bottom: 3em;
+}
 #start-container #start-btn {
-  font-size: 2rem;
+  align-self: center;
   padding: 1em;
   background: none;
   border: 4px solid rgb(255, 254, 250);
@@ -165,6 +175,78 @@ h2 {
   color: rgb(255, 254, 250);
 }
 
+@media screen and (min-width: 841px) {
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 20px;
+  }
+  #start-container #start-btn {
+    font-size: 2rem;
+  }
+  #game-container {
+    margin: 2em;
+    width: 35vw;
+  }
+  #game-container #game-field {
+    height: 35vw;
+  }
+}
+@media screen and (min-width: 550px) and (max-width: 840px) {
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 17px;
+  }
+  #start-container #start-btn {
+    font-size: 1.7rem;
+  }
+  #game-container {
+    width: 50vw;
+    margin: 1em;
+  }
+  #game-container #game-field {
+    height: 50vw;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 549px) {
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 12px;
+  }
+  #start-container #start-btn {
+    font-size: 1.3rem;
+  }
+  #game-container {
+    width: 80vw;
+    margin: 0.7em;
+  }
+  #game-container #game-field {
+    height: 80vw;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 319px) {
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 10px;
+  }
+  #start-container #start-btn {
+    font-size: 1rem;
+  }
+  #game-container {
+    width: 85vw;
+    margin: 0.3em;
+  }
+  #game-container #game-field {
+    height: 85vw;
+  }
+}
 body {
   width: 100vw;
   height: 100vh;
@@ -172,16 +254,18 @@ body {
   background: linear-gradient(0deg, rgb(50, 0, 62) 0%, rgb(100, 0, 110) 100%);
   background-repeat: repeat-y;
   color: rgb(255, 254, 250);
+  font-family: Oswald;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 body h1 {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
+  font-family: Lobster;
 }
 body .btn {
   border: none;
   padding: 0.25rem 0.75rem;
   border-radius: 1em;
-}
+}/*# sourceMappingURL=main.css.map */

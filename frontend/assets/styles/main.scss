@@ -5,6 +5,8 @@
 @import './scss/start';
 @import './nullstyle.css';
 @import './scss/modal';
+@import './scss/fonts';
+@import './scss/media';
 
 
 body {
@@ -14,11 +16,13 @@ body {
     background: $bgColour;
     background-repeat: repeat-y;
     color: $textColour;
+    font-family: Oswald;
     
     @include centerPosition;
 
     h1 {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
+        font-family: Lobster;
     }
 
     .btn {

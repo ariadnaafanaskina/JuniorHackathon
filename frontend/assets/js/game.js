@@ -9,7 +9,7 @@
 //     'https://www.svgrepo.com/show/415012/baseball-ball-bat.svg', 'https://www.svgrepo.com/show/415018/baby-bottle-milk.svg',];
 
 async function getCards() {
-    const apiUrl = `http://80.90.188.96:5000/Game/GetGameToStart`;
+    const apiUrl = `https://80.90.188.96:5000/Game/GetGameToStart`;
 
     return await fetch(apiUrl, {
         method: "GET",

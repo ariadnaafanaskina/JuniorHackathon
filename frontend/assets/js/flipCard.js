@@ -6,6 +6,7 @@ console.log(movesNumberElem)
 
 let movesNumber = 0;
 let correctPairsNumber = 0;
+let wins = 0;
 movesNumberElem.innerHTML = movesNumber;
 
 
@@ -14,28 +15,32 @@ function flipCardListener() {
     let lastSeenCard = null
 
     cards.forEach((card) => card.addEventListener("click", flipCard = () => {
-        card.classList.add("is-flipped");
+        if (!card.classList.contains("unclickable")) {
+            card.classList.add("is-flipped");
 
-        if (lastSeenCard) {
-            if (!(lastSeenCard.children[1].children[0].src === card.children[1].children[0].src)) {
-                cardsWrapper.style.pointerEvents = 'none';
+            if (lastSeenCard) {
+                if (!(lastSeenCard.children[1].children[0].src === card.children[1].children[0].src)) {
+                    cardsWrapper.style.pointerEvents = 'none';
 
-                setTimeout(() => {
+                    setTimeout(() => {
 
-                    lastSeenCard.classList.remove('is-flipped');
-                    card.classList.remove('is-flipped');
+                        lastSeenCard.classList.remove('is-flipped');
+                        card.classList.remove('is-flipped');
+                        lastSeenCard = null;
+                        cardsWrapper.style.pointerEvents = 'auto';
+                    }, 400)
+                } else {
+                    correctPairsNumber++;
+                    checkWin();
+                    lastSeenCard.classList.toggle('unclickable');
+                    card.classList.toggle('unclickable');
                     lastSeenCard = null;
-                    cardsWrapper.style.pointerEvents = 'auto';
-                }, 400)
+                }
+                movesNumber++;
+                movesNumberElem.innerHTML = movesNumber;
             } else {
-                correctPairsNumber++;
-                checkWin();
-                lastSeenCard = null;
+                lastSeenCard = card;
             }
-            movesNumber++;
-            movesNumberElem.innerHTML = movesNumber;
-        } else {
-            lastSeenCard = card;
         }
     }));
 }
@@ -54,6 +59,7 @@ function makeAllCardsFlipped() {
 
 function checkWin() {
     if (correctPairsNumber == 8) {
+        wins++;
         openModal();
     }
 }

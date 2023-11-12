@@ -1,9 +1,0 @@
-﻿{
-  "rewrites": [
-    {
-      "source": "https://80.90.188.96:5000/Game/GetGameToStart",
-      "destination": "http://80.90.188.96:5000/Game/GetGameToStart"
-    }
-  ]
-}
-

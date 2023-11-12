@@ -103,6 +103,9 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+#game-container .btn {
+  transition: all 0.3s ease;
+}
 
 h1 {
   font-size: 6rem;
@@ -137,10 +140,6 @@ h1 {
   color: rgb(71, 16, 88);
 }
 
-h2 {
-  font-size: 2rem;
-}
-
 .modal {
   z-index: 2;
   display: flex;
@@ -156,6 +155,14 @@ h2 {
   background-color: rgb(255, 254, 250);
   border: 1px solid #ddd;
   border-radius: 15px;
+  text-align: center;
+}
+.modal h2 {
+  font-size: 6rem;
+  margin-bottom: 0.2rem;
+}
+.modal p {
+  font-size: 2rem;
 }
 .modal .flex {
   display: flex;
@@ -173,8 +180,20 @@ h2 {
   transform: translate(10px, -20px);
   align-self: end;
   padding: 0.5rem 0.7rem;
-  background: #eee;
+  background-color: rgb(161, 81, 184);
   border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.modal .btn-close:hover {
+  background-color: rgb(139, 63, 160);
+  box-shadow: 2px 2px 2px rgba(59, 54, 54, 0.39);
+}
+.modal .btn-close:active {
+  background-color: rgb(71, 16, 87);
+  box-shadow: 2px 2px 2px rgba(59, 54, 54, 0.39);
+}
+.modal .new-game-btn {
+  font-size: 2rem;
 }
 
 .overlay {
@@ -198,6 +217,16 @@ h2 {
 .new-game-btn {
   background: rgb(71, 16, 88);
   color: rgb(255, 254, 250);
+  transition: all 0.3s ease;
+}
+
+.new-game-btn:hover {
+  background-color: rgb(49, 7, 61);
+  box-shadow: 2px 2px 2px rgba(59, 54, 54, 0.39);
+}
+
+.new-game-btn:active {
+  background-color: rgb(43, 6, 53);
 }
 
 @media screen and (min-width: 841px) {
@@ -260,6 +289,9 @@ h2 {
   #game-container .btn {
     font-size: 1rem;
   }
+  .modal {
+    width: 300px;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 319px) {
   h1 {
@@ -286,13 +318,22 @@ h2 {
   #game-container .btn {
     font-size: 0.8rem;
   }
+  .modal {
+    width: 220px;
+  }
+  .modal h2 {
+    font-size: 2.5rem;
+  }
+  .modal p {
+    font-size: 1.5rem;
+  }
 }
 body {
   width: 100vw;
   height: 100vh;
   padding: 0 15px;
   background-color: rgb(71, 16, 88);
-  background: linear-gradient(0deg, rgb(50, 0, 62) 0%, rgb(100, 0, 110) 100%);
+  background: linear-gradient(0deg, rgb(164, 145, 168) 0%, rgb(95, 57, 99) 100%);
   background-repeat: repeat-y;
   color: rgb(255, 254, 250);
   font-family: "Amatic SC", sans-serif;
@@ -305,6 +346,7 @@ body h1 {
   margin-top: 20px;
   text-align: center;
   font-family: "Amatic SC", sans-serif;
+  margin-top: 15px;
 }
 body .btn {
   border: none;

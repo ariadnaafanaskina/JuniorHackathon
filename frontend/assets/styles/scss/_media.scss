@@ -79,6 +79,9 @@
             font-size: 1rem;
         }
     }
+    .modal{
+        width: 300px
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 319px) {
@@ -109,6 +112,15 @@
         }
         .btn{
             font-size: 0.8rem;
+        }
+    }
+    .modal{
+        width: 220px;
+        h2{
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1.5rem;
         }
     }
 }

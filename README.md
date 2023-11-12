@@ -19,10 +19,10 @@ Memory Game
     ![photo_2023-11-12_17-53-33](https://github.com/ariadnaafanaskina/JuniorHackathon/assets/112199994/1f2ae660-56a7-4e8d-8344-7e5e31052f6b)
 
     -возможность начать игру заново;  
-    ![photo_2023-11-12_17-53-43](https://github.com/ariadnaafanaskina/JuniorHackathon/assets/112199994/b6171702-d53b-473f-9db2-996babb4a645)
+  ![photo_2023-11-12_17-53-43](https://github.com/ariadnaafanaskina/JuniorHackathon/assets/112199994/b6171702-d53b-473f-9db2-996babb4a645)
 
     -экран поздравления с окончанием игры;  
-    ![2023-11-12_17-54](https://github.com/ariadnaafanaskina/JuniorHackathon/assets/112199994/393f27ee-e784-437c-8990-14284236b4b3)
+![2023-11-12_17-54](https://github.com/ariadnaafanaskina/JuniorHackathon/assets/112199994/393f27ee-e784-437c-8990-14284236b4b3)
 
    
  Расширение проекта:

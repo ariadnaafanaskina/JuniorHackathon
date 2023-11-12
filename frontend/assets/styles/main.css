@@ -206,10 +206,10 @@ h2 {
   }
   #game-container {
     margin: 2em;
-    width: 35vw;
+    width: 32vw;
   }
   #game-container #game-field {
-    height: 35vw;
+    height: 32vw;
   }
   #game-container p {
     font-size: 2rem;
@@ -302,6 +302,7 @@ body {
   align-items: center;
 }
 body h1 {
+  margin-top: 20px;
   text-align: center;
   font-family: "Amatic SC", sans-serif;
 }

@@ -1,5 +1,6 @@
 @import './nullstyle.css';
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Lobster&family=Oswald:wght@200;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playpen+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800;900&family=Titan+One&family=Ubuntu:wght@400;700&display=swap");
 .cards-wrapper {
   position: relative;
   width: 100%;
@@ -103,6 +104,11 @@
   flex-wrap: wrap;
 }
 
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
 #start-container {
   display: flex;
   flex-direction: column;
@@ -110,7 +116,9 @@
   align-items: center;
 }
 #start-container p {
-  margin-bottom: 3em;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 #start-container #start-btn {
   align-self: center;
@@ -193,12 +201,6 @@ h2 {
 }
 
 @media screen and (min-width: 841px) {
-  h1 {
-    font-size: 40px;
-  }
-  p {
-    font-size: 20px;
-  }
   #start-container #start-btn {
     font-size: 2rem;
   }
@@ -209,13 +211,16 @@ h2 {
   #game-container #game-field {
     height: 35vw;
   }
+  #game-container p {
+    font-size: 2rem;
+  }
 }
 @media screen and (min-width: 550px) and (max-width: 840px) {
   h1 {
-    font-size: 32px;
+    font-size: 5rem;
   }
   p {
-    font-size: 17px;
+    font-size: 1.7rem;
   }
   #start-container #start-btn {
     font-size: 1.7rem;
@@ -227,16 +232,23 @@ h2 {
   #game-container #game-field {
     height: 50vw;
   }
+  #game-container .btn {
+    font-size: 1.1rem;
+  }
 }
 @media screen and (min-width: 320px) and (max-width: 549px) {
   h1 {
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 4rem;
   }
   p {
-    font-size: 12px;
+    font-size: 1.8rem;
   }
   #start-container #start-btn {
     font-size: 1.3rem;
+  }
+  #start-container p {
+    font-size: 1.8rem;
   }
   #game-container {
     width: 80vw;
@@ -245,16 +257,24 @@ h2 {
   #game-container #game-field {
     height: 80vw;
   }
+  #game-container .btn {
+    font-size: 1rem;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 319px) {
   h1 {
-    font-size: 24px;
+    font-size: 2rem;
   }
   p {
-    font-size: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
   }
   #start-container #start-btn {
     font-size: 1rem;
+  }
+  #start-container p {
+    font-size: 1.5rem;
   }
   #game-container {
     width: 85vw;
@@ -263,26 +283,32 @@ h2 {
   #game-container #game-field {
     height: 85vw;
   }
+  #game-container .btn {
+    font-size: 0.8rem;
+  }
 }
 body {
   width: 100vw;
   height: 100vh;
+  padding: 0 15px;
   background-color: rgb(71, 16, 88);
   background: linear-gradient(0deg, rgb(50, 0, 62) 0%, rgb(100, 0, 110) 100%);
   background-repeat: repeat-y;
   color: rgb(255, 254, 250);
-  font-family: Oswald;
+  font-family: "Amatic SC", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 body h1 {
-  margin-bottom: 0.5em;
-  font-family: Lobster;
+  text-align: center;
+  font-family: "Amatic SC", sans-serif;
 }
 body .btn {
   border: none;
   padding: 0.25rem 0.75rem;
   border-radius: 1em;
-}/*# sourceMappingURL=main.css.map */
+  font-weight: 700;
+  font-size: 1.3rem;
+}

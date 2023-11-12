@@ -35,7 +35,6 @@ async function getCards() {
 }
 async function generateGame() {
     const arr = await getCards();
-    console.log(arr);
     let gameWrap = document.querySelector(".cards-wrapper");
     let n = 1;
     arr.forEach(img => {
